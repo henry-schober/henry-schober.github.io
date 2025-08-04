@@ -579,6 +579,9 @@ section,
   align-items: center;
 }
 
+
+
+
 .hero h2 {
   margin: 0;
   font-size: 64px;
@@ -620,6 +623,57 @@ section,
   .hero p {
     font-size: 20px;
   }
+}
+
+/*--------------------------------------------------------------
+# Timeline Section
+--------------------------------------------------------------*/
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 100px auto;
+}
+.timeline_container {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+}
+.text-box{
+  padding: 20px 30px;
+  background: #46c7fa;
+  position: relative;
+  border-radius: 6px;
+  font-size: 20px;
+}
+.left-container{
+  left: 0;
+}
+.right-container{
+  left: 50%;
+}
+.timeline_container img{
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+  right: -20px;
+  top: 32px;
+  z-index: 10;
+}
+.right-container img{
+  left: -20px;
+}
+
+.timeline::after{
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background-color: #041218;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
 }
 
 /*--------------------------------------------------------------
