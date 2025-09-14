@@ -226,4 +226,40 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Carousel - Abstracts
+   */
+    const cards = document.querySelectorAll('.card');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      cards.forEach((card, i) => {
+        card.className = 'card'; // reset
+        if (i === currentIndex) {
+          card.classList.add('active');
+        } else if (i === (currentIndex - 1 + cards.length) % cards.length) {
+          card.classList.add('left');
+        } else if (i === (currentIndex + 1) % cards.length) {
+          card.classList.add('right');
+        }
+      });
+    }
+
+    updateCarousel();
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      updateCarousel();
+    });
+
+
+
 })();
