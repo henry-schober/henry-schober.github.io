@@ -293,46 +293,6 @@
       }
     });
 
-    let currentIndex = 0;
-
-    // Detect if mobile
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
-    if (isMobile) {
-      const cards = document.querySelectorAll(".card");
-
-      function showCard(index) {
-        // clamp between 0 and last
-        if (index < 0) index = 0;
-        if (index >= cards.length) index = cards.length - 1;
-        currentIndex = index;
-        cardsContainer.style.transform = `translateX(-${index * 100}%)`;
-      }
-
-      // Swipe detection
-      let startX = 0;
-      let endX = 0;
-
-      cardsContainer.addEventListener("touchstart", (e) => {
-        startX = e.changedTouches[0].screenX;
-      });
-
-      cardsContainer.addEventListener("touchend", (e) => {
-        endX = e.changedTouches[0].screenX;
-        const diff = endX - startX;
-        if (Math.abs(diff) > 50) {
-          if (diff > 0) showCard(currentIndex - 1); // swipe right
-          else showCard(currentIndex + 1); // swipe left
-        }
-      });
-
-      // Optional: Hook arrows into same logic
-      prevBtn.addEventListener("click", () => showCard(currentIndex - 1));
-      nextBtn.addEventListener("click", () => showCard(currentIndex + 1));
-
-      // Start at first card
-      showCard(0);
-    }
-
+    
 
 })();
