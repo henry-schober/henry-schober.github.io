@@ -916,11 +916,8 @@ section,
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 80vw;
-  max-width: 250px;
-  height: auto;
-  max-height: 350px;
-  aspect-ratio: 3/4;
+  width: 250px;
+  height: 350px;
   transform: translate(-50%, -50%);
   transition: transform 0.6s ease, opacity 0.6s ease, z-index 0.6s;
   border-radius: 10px;
@@ -929,6 +926,40 @@ section,
   background: white;
   opacity: 0;
   pointer-events: none;
+}
+
+
+
+/* Mobile: show only 1 centered card */
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    width: 100%;
+    height: auto;
+    perspective: none; /* flatten 3D */
+  }
+
+  .cards-container {
+    display: flex;
+    transform: none !important; /* stop 3D rotation */
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .card {
+    flex: 0 0 100%; /* take full width */
+    height: auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 }
 
 .card img {
