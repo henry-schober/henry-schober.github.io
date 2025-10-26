@@ -1423,3 +1423,165 @@ section,
 .spotify-button:hover {
   background-color: #1ed760; /* Optional: slightly lighter on hover */
 }
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Projects Section
+--------------------------------------------------------------*/
+
+.dev-log {
+  background: #f9f9f9;
+  border-left: 4px solid #4f46e5; /* Indigo accent like your progress bar */
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+.dev-log h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #222;
+}
+
+.dev-log ul {
+  padding-left: 1rem;
+  margin: 0;
+  list-style-type: none;
+}
+
+.dev-log li {
+  margin-bottom: 0.4rem;
+  position: relative;
+  padding-left: 0.8rem;
+}
+
+.dev-log li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #4f46e5; /* matches the border */
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 360px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.progress {
+  background: #e5e7eb;
+  border-radius: 8px;
+  height: 6px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #4f46e5; /* indigo */
+  border-radius: 8px;
+  transition: width 0.4s ease;
+}
+
+.progress-bar.orange { background: #f59e0b; }
+.progress-bar.purple { background: #a855f7; }
+
+.progress-text {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.tags span {
+  display: inline-block;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 8px;
+  margin: 0 0.2rem 0.4rem 0;
+}
+
+.summary, .update {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+.workflow-img {
+  width: 60%;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.project-card:hover .workflow-img {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.version-badge {
+  background-color: #1cff1c;
+  color: #000000;
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  margin-left: 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.yaml-progress {
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.yaml-bar {
+  display: inline-block;
+  white-space: pre;
+  background-color: #f3f4f6; /* light gray background like your .progress */
+  color: #009e84; /* matches your orange progress bar */
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+}
+
+.yaml-percent {
+  font-weight: 500;
+  color: #374151; /* matches .progress-text color */
+}

@@ -60,9 +60,10 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#abstract"><i class="bi bi-file-earmark-bar-graph-fill navicon"></i> Abstracts</a></li>
+        <li><a href="#about"><i class="bi bi-person-workspace navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-list-columns navicon"></i> Resume</a></li>
+        <li><a href="#abstract"><i class="bi bi-file-slides navicon"></i> Abstracts</a></li>
+        <li><a href="#projects"><i class="bi bi-code-slash navicon"></i> Current Projects</a></li>
       </ul>
     </nav>
 
@@ -243,7 +244,7 @@
             <div class="col-12 portfolio-item isotope-item filter-research">
               <div class="resume-item position-relative">
                 <h4 class="title">
-                  <a href="https://doi.org/10.48546/WORKFLOWHUB.WORKFLOW.1950.1" target="_blank" class="stretched-link">
+                  <a href="https://gitlab.com/PlantGenomicsLab/qc-nf/-/tree/main?ref_type=heads" target="_blank" class="stretched-link">
                     <strong>QuaCk</strong>
                   </a>
                 </h4>
@@ -335,6 +336,88 @@
 
     </section><!-- /abstract Section -->
 
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Projects in Progress</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="projects-grid">
+          <!-- Project Card 1 -->
+          <div class="project-card">
+            <h3>QuaCk
+              <span class="version-badge">v1.0.0</span>
+            </h3>
+            <div class="yaml-progress" data-progress="10">
+              <span class="yaml-bar"></span>
+              <span class="yaml-percent">10%</span>
+            </div>
+            <p class="progress-text">Progress to Next Update: 10%</p>
+            <div class="tags">
+              <span>Nextflow</span>
+              <span>Quality Control</span>
+              <span>MultiQC</span>
+              <span>Illumina</span>
+              <span>PacBio</span>
+              <span>ONT</span>
+            </div>
+            <p class="summary">
+              Nextflow Based Quality Control Pipeline for Illumina, PacBio, and ONT Reads.
+            </p>
+            <img src="./assets/img/Copy of QuaCk logo, larger feet.png" alt="Workflow diagram" class="workflow-img" />                  
+            <a href="https://gitlab.com/PlantGenomicsLab/qc-nf/-/tree/main?ref_type=heads" target="_blank" class="stretched-link"></a>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="project-card">
+            <h3>MethylForge</h3>
+            <div class="yaml-progress" data-progress="70">
+              <span class="yaml-bar"></span>
+              <span class="yaml-percent">70%</span>
+            </div>
+            <p class="progress-text">Progress to <strong>Modkit</strong> Update: 70%</p>
+            <div class="tags">
+              <span>Nextflow</span>
+              <span>Dorado</span>
+              <span>Modkit</span>
+              <span>ONT</span>
+            </div>
+            <p class="summary">
+              ONT methylation pipeline from raw pod5 files to a finalized bedgraph of methylated sites.
+            </p>
+              <div class="dev-log">
+                <h4>Dev Log</h4>
+                <ul>
+                  <li><strong>Oct 26, 2025:</strong> Finished dorado basecalling process </li>
+                </ul>
+              </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="project-card">
+            <h3>PanPath</h3>
+            <div class="yaml-progress" data-progress="40">
+              <span class="yaml-bar"></span>
+              <span class="yaml-percent">40%</span>
+            </div>
+            <p class="progress-text">Progress to Next Update: 40%</p>
+            <div class="tags">
+              <span>R Shiny</span>
+              <span>GBIF</span>
+            </div>
+            <p class="summary">
+              R Shiny app for visualizing migration patterns of species using GBIF data.
+            </p>
+            <p class="update">
+              Currently finished proof of concept R Shiny App
+            </p>
+          </div>
+        </div>
+      </div>
+    </section><!-- /projects Section -->
 
   </main>
 

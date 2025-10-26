@@ -293,6 +293,39 @@
       }
     });
 
-    
+    function animateYamlProgress(el) {
+      const percent = parseInt(el.dataset.progress) || 0;
+      const totalBlocks = 20;
+      let current = 0;
+
+      const interval = setInterval(() => {
+        current += 1;
+        if (current > percent) {
+          clearInterval(interval);
+          current = percent;
+        }
+
+        const filledBlocks = Math.round((current / 100) * totalBlocks);
+        const emptyBlocks = totalBlocks - filledBlocks;
+
+        let bar = '';
+        if (current === 100) {
+          bar = '='.repeat(totalBlocks);
+        } else if (filledBlocks === 0) {
+          bar = ' '.repeat(totalBlocks);
+        } else {
+          bar = '='.repeat(filledBlocks - 1) + '>' + ' '.repeat(emptyBlocks);
+        }
+
+        el.querySelector('.yaml-bar').textContent = `[${bar}]`;
+        el.querySelector('.yaml-percent').textContent = `${current}%`;
+
+      }, 20); // 20ms per step = smooth animation
+    }
+
+    // Animate all YAML bars after DOM loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.yaml-progress').forEach(animateYamlProgress);
+    });
 
 })();
